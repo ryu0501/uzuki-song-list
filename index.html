@@ -2,39 +2,53 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>歌える曲一覧</title>
+<title>兎月詩　歌える曲一覧</title>
 <style>
+  body {
+    text-align: center; /* 全体を中央寄せにするための基本設定 */
+  }
   table { 
-    width: 50%;  /* テーブルの全体幅を50%に設定 */
+    width: 80%;  /* テーブルの全体幅を80%に設定 */
     border-collapse: collapse;
-    margin: auto;  /* 中央寄せ */
+    margin: 20px auto;  /* テーブルを中央寄せ */
   }
   th, td { 
     border: 1px solid black; 
     padding: 8px; 
     text-align: left;
-    width: 50%;  /* セルの幅を50%に設定 */
   }
   th { 
     cursor: pointer; 
+  }
+  .artist-name {
+    width: 200px; /* アーティスト名の列の幅を200pxに設定 */
+  }
+  .song-name {
+    width: 300px; /* 曲名の列の幅を300pxに設定 */
+  }
+  #searchInput {
+    margin: 20px 0; /* 上下にマージンを設定 */
+    padding: 10px; /* 内側にパディングを設定 */
+    width: 50%; /* 幅を50%に設定 */
+    box-sizing: border-box; /* パディングとボーダーを含めた幅を設定 */
   }
 </style>
 </head>
 <body>
 
-<h2>歌える曲一覧</h2>
-<input type="text" id="searchInput" placeholder="検索..." style="margin-bottom: 10px;">
+<h2>兎月詩　歌える曲一覧</h2>
+<input type="text" id="searchInput" placeholder="検索...">
 
 <table id="songsTable">
   <thead>
     <tr>
-      <th onclick="sortTable(0)">アーティスト名</th>
-      <th onclick="sortTable(1)">曲名</th>
+      <th class="artist-name" onclick="sortTable(0)">アーティスト名</th>
+      <th class="song-name" onclick="sortTable(1)">曲名</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>アーティスト1</td><td>曲1</td></tr>
-    <tr><td>アーティスト2</td><td>曲2</td></tr>
+    <tr><td class="artist-name">アーティスト1</td><td class="song-name">曲1</td></tr>
+    <tr><td class="artist-name">アーティスト2</td><td class="song-name">曲2</td></tr>
     <!-- 続けて他の曲を追加 -->
   </tbody>
 </table>
