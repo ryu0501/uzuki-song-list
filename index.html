@@ -32,6 +32,45 @@
     width: 50%; /* 幅を50%に設定 */
     box-sizing: border-box; /* パディングとボーダーを含めた幅を設定 */
   }
+
+  /* デスクトップ向けスタイル */
+  @media (min-width: 1024px) {
+    .artist-name {
+      width: 200px;
+    }
+    .song-name {
+      width: 300px;
+    }
+  }
+
+  /* タブレット向けスタイル */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .artist-name {
+      width: 150px;
+    }
+    .song-name {
+      width: 250px;
+    }
+    table {
+      width: 90%; /* テーブルの幅をタブレット向けに調整 */
+    }
+  }
+
+  /* モバイル向けスタイル */
+  @media (max-width: 767px) {
+    .artist-name {
+      width: 100px;
+    }
+    .song-name {
+      width: 200px;
+    }
+    table {
+      width: 100%; /* テーブルの幅をモバイル向けに調整 */
+    }
+    #searchInput {
+      width: 80%; /* 検索欄の幅をモバイル向けに調整 */
+    }
+  }
 </style>
 </head>
 <body>
