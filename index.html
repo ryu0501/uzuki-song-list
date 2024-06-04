@@ -27,6 +27,9 @@
   .song-name {
     width: 300px; /* 曲名の列の幅を300pxに設定 */
   }
+  .song-id {
+    width: 45px; /* 管理番号の列の幅を45pxに設定 */
+  }
   #searchInput {
     margin: 20px 0; /* 上下にマージンを設定 */
     padding: 10px; /* 内側にパディングを設定 */
@@ -34,10 +37,10 @@
     box-sizing: border-box; /* パディングとボーダーを含めた幅を設定 */
   }
   tbody tr:nth-child(odd) {
-    background-color: #d2d2d2; /* 奇数行の背景色を濃いグレーに設定 */
+    background-color: #d2d2d2; /* 奇数行の背景色を #d2d2d2 に設定 */
   }
   tbody tr:nth-child(even) {
-    background-color: #ffffff; /* 偶数行の背景色を #f2f2f2 に設定 */
+    background-color: #f2f2f2; /* 偶数行の背景色を #f2f2f2 に設定 */
   }
 
   /* デスクトップ向けスタイル */
@@ -90,29 +93,30 @@
     <tr>
       <th class="artist-name" onclick="sortTable(0)">アーティスト名</th>
       <th class="song-name" onclick="sortTable(1)">曲名</th>
+      <th class="song-id" onclick="sortTable(2)">管理番号</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td class="artist-name">アーティスト1</td><td class="song-name">曲1</td></tr>
-    <tr><td class="artist-name">アーティスト2</td><td class="song-name">曲2</td></tr>
-    <tr><td class="artist-name">アーティスト3</td><td class="song-name">曲3</td></tr>
-    <tr><td class="artist-name">アーティスト4</td><td class="song-name">曲4</td></tr>
-    <tr><td class="artist-name">アーティスト5</td><td class="song-name">曲5</td></tr>
-    <tr><td class="artist-name">アーティスト6</td><td class="song-name">曲6</td></tr>
-    <tr><td class="artist-name">アーティスト7</td><td class="song-name">曲7</td></tr>
-    <tr><td class="artist-name">アーティスト8</td><td class="song-name">曲8</td></tr>
-    <tr><td class="artist-name">アーティスト9</td><td class="song-name">曲9</td></tr>
-    <tr><td class="artist-name">アーティスト10</td><td class="song-name">曲10</td></tr>
-    <tr><td class="artist-name">アーティスト11</td><td class="song-name">曲11</td></tr>
-    <tr><td class="artist-name">アーティスト12</td><td class="song-name">曲12</td></tr>
-    <tr><td class="artist-name">アーティスト13</td><td class="song-name">曲13</td></tr>
-    <tr><td class="artist-name">アーティスト14</td><td class="song-name">曲14</td></tr>
-    <tr><td class="artist-name">アーティスト15</td><td class="song-name">曲15</td></tr>
-    <tr><td class="artist-name">アーティスト16</td><td class="song-name">曲16</td></tr>
-    <tr><td class="artist-name">アーティスト17</td><td class="song-name">曲17</td></tr>
-    <tr><td class="artist-name">アーティスト18</td><td class="song-name">曲18</td></tr>
-    <tr><td class="artist-name">アーティスト19</td><td class="song-name">曲19</td></tr>
-    <tr><td class="artist-name">アーティスト20</td><td class="song-name">曲20</td></tr>
+    <tr><td class="artist-name">アーティスト1</td><td class="song-name">曲1</td><td class="song-id">001</td></tr>
+    <tr><td class="artist-name">アーティスト2</td><td class="song-name">曲2</td><td class="song-id">002</td></tr>
+    <tr><td class="artist-name">アーティスト3</td><td class="song-name">曲3</td><td class="song-id">003</td></tr>
+    <tr><td class="artist-name">アーティスト4</td><td class="song-name">曲4</td><td class="song-id">004</td></tr>
+    <tr><td class="artist-name">アーティスト5</td><td class="song-name">曲5</td><td class="song-id">005</td></tr>
+    <tr><td class="artist-name">アーティスト6</td><td class="song-name">曲6</td><td class="song-id">006</td></tr>
+    <tr><td class="artist-name">アーティスト7</td><td class="song-name">曲7</td><td class="song-id">007</td></tr>
+    <tr><td class="artist-name">アーティスト8</td><td class="song-name">曲8</td><td class="song-id">008</td></tr>
+    <tr><td class="artist-name">アーティスト9</td><td class="song-name">曲9</td><td class="song-id">009</td></tr>
+    <tr><td class="artist-name">アーティスト10</td><td class="song-name">曲10</td><td class="song-id">010</td></tr>
+    <tr><td class="artist-name">アーティスト11</td><td class="song-name">曲11</td><td class="song-id">011</td></tr>
+    <tr><td class="artist-name">アーティスト12</td><td class="song-name">曲12</td><td class="song-id">012</td></tr>
+    <tr><td class="artist-name">アーティスト13</td><td class="song-name">曲13</td><td class="song-id">013</td></tr>
+    <tr><td class="artist-name">アーティスト14</td><td class="song-name">曲14</td><td class="song-id">014</td></tr>
+    <tr><td class="artist-name">アーティスト15</td><td class="song-name">曲15</td><td class="song-id">015</td></tr>
+    <tr><td class="artist-name">アーティスト16</td><td class="song-name">曲16</td><td class="song-id">016</td></tr>
+    <tr><td class="artist-name">アーティスト17</td><td class="song-name">曲17</td><td class="song-id">017</td></tr>
+    <tr><td class="artist-name">アーティスト18</td><td class="song-name">曲18</td><td class="song-id">018</td></tr>
+    <tr><td class="artist-name">アーティスト19</td><td class="song-name">曲19</td><td class="song-id">019</td></tr>
+    <tr><td class="artist-name">アーティスト20</td><td class="song-name">曲20</td><td class="song-id">020</td></tr>
   </tbody>
 </table>
 
@@ -129,7 +133,8 @@ document.getElementById('searchInput').addEventListener('keyup', function() {
   for (let i = 1; i < rows.length; i++) {
     let artist = normalizeString(rows[i].getElementsByTagName("td")[0].textContent);
     let song = normalizeString(rows[i].getElementsByTagName("td")[1].textContent);
-    if (artist.includes(filter) || song.includes(filter)) {
+    let songId = normalizeString(rows[i].getElementsByTagName("td")[2].textContent);
+    if (artist.includes(filter) || song.includes(filter) || songId.includes(filter)) {
       rows[i].style.display = "";
     } else {
       rows[i].style.display = "none";
