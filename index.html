@@ -45,6 +45,19 @@
     background-color: #f2f2f2; /* 偶数行の背景色を #f2f2f2 に設定 */
   }
 
+  /* 既存のCSS */
+
+.hidden {
+    display: none; /* 非表示のスタイル */
+  }
+  
+.highlight {
+    background-color: yellow; /* ハイライトの背景色を黄色に設定 */
+    border: 1px solid black; /* ハイライトに黒の枠を設定 */
+  }
+  
+  
+
   /* デスクトップ向けスタイル */
   @media (min-width: 1024px) {
     .artist-name {
@@ -91,69 +104,114 @@
 <input type="text" id="searchInput" placeholder="検索...">
 
 <table id="songsTable">
-  <thead>
+    <thead>
+        <tr>
+          <th class="artist-name" onclick="sortTable(0)">アーティスト名</th>
+          <th class="hidden">アーティスト名読み仮名</th>
+          <th class="song-name" onclick="sortTable(1)">曲名</th>
+          <th class="hidden">曲名読み仮名</th>
+          <th class="song-id" onclick="sortTable(2)">管理番号</th>
+        </tr>
+      </thead>
+  
+  <<tbody>
     <tr>
-      <th class="artist-name" onclick="sortTable(0)">アーティスト名</th>
-      <th class="song-name" onclick="sortTable(1)">曲名</th>
-      <th class="song-id" onclick="sortTable(2)">管理番号</th>
+      <td class="artist-name">※アーティスト情報なし</td>
+      <td class="hidden">ナシ</td>
+      <td class="song-name">いかないで</td>
+      <td class="hidden">イカナイデ</td>
+      <td class="song-id">001</td>
     </tr>
-  </thead>
-  <tbody>
-    <tr><td class="artist-name">アーティスト1</td><td class="song-name">曲1</td><td class="song-id">001</td></tr>
-    <tr><td class="artist-name">アーティスト2</td><td class="song-name">曲2</td><td class="song-id">002</td></tr>
-    <tr><td class="artist-name">アーティスト3</td><td class="song-name">曲3</td><td class="song-id">003</td></tr>
-    <tr><td class="artist-name">アーティスト4</td><td class="song-name">曲4</td><td class="song-id">004</td></tr>
-    <tr><td class="artist-name">アーティスト5</td><td class="song-name">曲5</td><td class="song-id">005</td></tr>
-    <tr><td class="artist-name">アーティスト6</td><td class="song-name">曲6</td><td class="song-id">006</td></tr>
-    <tr><td class="artist-name">アーティスト7</td><td class="song-name">曲7</td><td class="song-id">007</td></tr>
-    <tr><td class="artist-name">アーティスト8</td><td class="song-name">曲8</td><td class="song-id">008</td></tr>
-    <tr><td class="artist-name">アーティスト9</td><td class="song-name">曲9</td><td class="song-id">009</td></tr>
-    <tr><td class="artist-name">アーティスト10</td><td class="song-name">曲10</td><td class="song-id">010</td></tr>
-    <tr><td class="artist-name">アーティスト11</td><td class="song-name">曲11</td><td class="song-id">011</td></tr>
-    <tr><td class="artist-name">アーティスト12</td><td class="song-name">曲12</td><td class="song-id">012</td></tr>
-    <tr><td class="artist-name">アーティスト13</td><td class="song-name">曲13</td><td class="song-id">013</td></tr>
-    <tr><td class="artist-name">アーティスト14</td><td class="song-name">曲14</td><td class="song-id">014</td></tr>
-    <tr><td class="artist-name">アーティスト15</td><td class="song-name">曲15</td><td class="song-id">015</td></tr>
-    <tr><td class="artist-name">アーティスト16</td><td class="song-name">曲16</td><td class="song-id">016</td></tr>
-    <tr><td class="artist-name">アーティスト17</td><td class="song-name">曲17</td><td class="song-id">017</td></tr>
-    <tr><td class="artist-name">アーティスト18</td><td class="song-name">曲18</td><td class="song-id">018</td></tr>
-    <tr><td class="artist-name">アーティスト19</td><td class="song-name">曲19</td><td class="song-id">019</td></tr>
-    <tr><td class="artist-name">アーティスト20</td><td class="song-name">曲20</td><td class="song-id">020</td></tr>
+    <tr>
+      <td class="artist-name">MANDY MOORE</td>
+      <td class="hidden">マンディ・ムーア</td>
+      <td class="song-name">自由への扉</td>
+      <td class="hidden">ジユウヘノトビラ</td>
+      <td class="song-id">002</td>
+    </tr>
+    <!-- その他の行も同様 -->
+    <tr><td class="artist-name">IWish</td><td class="song-name">明日への扉</td><td class="song-id">003</td></tr>
+    <tr><td class="artist-name">相川　七瀬</td><td class="song-name">夢見る少女じゃいられない</td><td class="song-id">004</td></tr>
+    <tr><td class="artist-name">AKINO</td><td class="song-name">創聖のアクエリオン</td><td class="song-id">005</td></tr>
+    <tr><td class="artist-name">りょーくん</td><td class="song-name">吉原ラメント</td><td class="song-id">006</td></tr>
+    <tr><td class="artist-name">新しい月このリーダーズ</td><td class="song-name">オトナブルー</td><td class="song-id">007</td></tr>
+    <tr><td class="artist-name">Ado</td><td class="song-name">阿修羅ちゃん</td><td class="song-id">008</td></tr>
+    <tr><td class="artist-name">Ado</td><td class="song-name">うっせぇわ</td><td class="song-id">009</td></tr>
+    <tr><td class="artist-name">Ado</td><td class="song-name">ギラギラ</td><td class="song-id">010</td></tr>
+    <tr><td class="artist-name">Ado</td><td class="song-name">レディメイド</td><td class="song-id">011</td></tr>
+    <tr><td class="artist-name">Ado</td><td class="song-name">私は最強</td><td class="song-id">012</td></tr>
+    <tr><td class="artist-name">Ado</td><td class="song-name">新時代</td><td class="song-id">013</td></tr>
+    <tr><td class="artist-name">嵐</td><td class="song-name">Love so sweet</td><td class="song-id">014</td></tr>
+    <tr><td class="artist-name">嵐</td><td class="song-name">One Love</td><td class="song-id">015</td></tr>
+    <tr><td class="artist-name">AliA</td><td class="song-name">かくれんぼ</td><td class="song-id">016</td></tr>
+    <tr><td class="artist-name">angela</td><td class="song-name">Shangri-la</td><td class="song-id">017</td></tr>
+    <tr><td class="artist-name">いきものがかり</td><td class="song-name">YELL</td><td class="song-id">018</td></tr>
+    <tr><td class="artist-name">いきものがかり</td><td class="song-name">ブルーバード</td><td class="song-id">019</td></tr>
+    <tr><td class="artist-name">石川　さゆり</td><td class="song-name">津軽海峡冬景色</td><td class="song-id">020</td></tr>
   </tbody>
 </table>
 
 <script>
-function normalizeString(str) {
-  return str.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) {
-    return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
-  }).toUpperCase();
-}
-
-document.getElementById('searchInput').addEventListener('keyup', function() {
-  let filter = normalizeString(this.value);
-  let rows = document.getElementById("songsTable").getElementsByTagName("tr");
-  for (let i = 1; i < rows.length; i++) {
-    let artist = normalizeString(rows[i].getElementsByTagName("td")[0].textContent);
-    let song = normalizeString(rows[i].getElementsByTagName("td")[1].textContent);
-    let songId = normalizeString(rows[i].getElementsByTagName("td")[2].textContent);
-    if (artist.includes(filter) || song.includes(filter) || songId.includes(filter)) {
-      rows[i].style.display = "";
-    } else {
-      rows[i].style.display = "none";
-    }
-  }
-});
-
-function sortTable(n) {
-  let table = document.getElementById("songsTable");
-  let rows = Array.from(table.rows).slice(1);
-  let sortedRows = rows.sort((a, b) => {
-    let textA = a.cells[n].textContent;
-    let textB = b.cells[n].textContent;
-    return textA.localeCompare(textB);
-  });
-  sortedRows.forEach(row => table.appendChild(row));
-}
+    function normalizeString(str) {
+        return str.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) {
+          return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+        }).toUpperCase();
+      }
+      
+      document.getElementById('searchInput').addEventListener('keyup', function() {
+        let filter = normalizeString(this.value);
+        let rows = document.getElementById("songsTable").getElementsByTagName("tr");
+      
+        for (let i = 1; i < rows.length; i++) {
+          let artistTd = rows[i].getElementsByTagName("td")[0];
+          let artistPhoneticTd = rows[i].getElementsByTagName("td")[1];
+          let songTd = rows[i].getElementsByTagName("td")[2];
+          let songPhoneticTd = rows[i].getElementsByTagName("td")[3];
+          let songIdTd = rows[i].getElementsByTagName("td")[4];
+          let artist = normalizeString(artistTd.textContent);
+          let artistPhonetic = normalizeString(artistPhoneticTd.textContent);
+          let song = normalizeString(songTd.textContent);
+          let songPhonetic = normalizeString(songPhoneticTd.textContent);
+          let songId = normalizeString(songIdTd.textContent);
+      
+          artistTd.innerHTML = artistTd.textContent; // リセット
+          songTd.innerHTML = songTd.textContent; // リセット
+          songIdTd.innerHTML = songIdTd.textContent; // リセット
+      
+          if (filter === "") {
+            artistTd.classList.remove('highlight');
+            songTd.classList.remove('highlight');
+            rows[i].style.display = "";
+          } else {
+            if (artist.includes(filter) || artistPhonetic.includes(filter)) {
+              artistTd.classList.add('highlight');
+            } else {
+              artistTd.classList.remove('highlight');
+            }
+      
+            if (song.includes(filter) || songPhonetic.includes(filter)) {
+              songTd.classList.add('highlight');
+            } else {
+              songTd.classList.remove('highlight');
+            }
+      
+            rows[i].style.display = (artist.includes(filter) || artistPhonetic.includes(filter) || song.includes(filter) || songPhonetic.includes(filter) || songId.includes(filter)) ? "" : "none";
+          }
+        }
+      });
+      
+      function sortTable(n) {
+        let table = document.getElementById("songsTable");
+        let rows = Array.from(table.rows).slice(1);
+        let sortedRows = rows.sort((a, b) => {
+          let textA = a.cells[n].textContent;
+          let textB = b.cells[n].textContent;
+          return textA.localeCompare(textB);
+        });
+        sortedRows.forEach(row => table.appendChild(row));
+      }
+      
+      
 </script>
 
 </body>
