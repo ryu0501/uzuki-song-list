@@ -105,49 +105,112 @@
 
 <table id="songsTable">
     <thead>
-        <tr>
-          <th class="artist-name" onclick="sortTable(0)">アーティスト名</th>
-          <th class="hidden">アーティスト名読み仮名</th>
-          <th class="song-name" onclick="sortTable(1)">曲名</th>
-          <th class="hidden">曲名読み仮名</th>
-          <th class="song-id" onclick="sortTable(2)">管理番号</th>
-        </tr>
-      </thead>
-  
-  <<tbody>
+    <tr>
+      <th class="artist-name" onclick="sortTable(0)">アーティスト名</th>
+      <th class="hidden">アーティスト名読み仮名</th>
+      <th class="song-name" onclick="sortTable(2)">曲名</th>
+      <th class="hidden">曲名読み仮名</th>
+      <th class="song-id" onclick="sortTable(4)">管理番号</th>
+    </tr>
+  </thead>
+  <tbody>
     <tr>
       <td class="artist-name">※アーティスト情報なし</td>
-      <td class="hidden">ナシ</td>
+      <td class="hidden">なしナシ</td>
       <td class="song-name">いかないで</td>
-      <td class="hidden">イカナイデ</td>
+      <td class="hidden">いかないでイカナイデ</td>
       <td class="song-id">001</td>
     </tr>
     <tr>
       <td class="artist-name">MANDY MOORE</td>
-      <td class="hidden">マンディ・ムーア</td>
+      <td class="hidden">まんでぃむーあマンディムーア</td>
       <td class="song-name">自由への扉</td>
-      <td class="hidden">ジユウヘノトビラ</td>
+      <td class="hidden">じゆうへのとびらジユウヘノトビラ</td>
       <td class="song-id">002</td>
     </tr>
-    <!-- その他の行も同様 -->
-    <tr><td class="artist-name">IWish</td><td class="song-name">明日への扉</td><td class="song-id">003</td></tr>
-    <tr><td class="artist-name">相川　七瀬</td><td class="song-name">夢見る少女じゃいられない</td><td class="song-id">004</td></tr>
-    <tr><td class="artist-name">AKINO</td><td class="song-name">創聖のアクエリオン</td><td class="song-id">005</td></tr>
-    <tr><td class="artist-name">りょーくん</td><td class="song-name">吉原ラメント</td><td class="song-id">006</td></tr>
-    <tr><td class="artist-name">新しい月このリーダーズ</td><td class="song-name">オトナブルー</td><td class="song-id">007</td></tr>
-    <tr><td class="artist-name">Ado</td><td class="song-name">阿修羅ちゃん</td><td class="song-id">008</td></tr>
-    <tr><td class="artist-name">Ado</td><td class="song-name">うっせぇわ</td><td class="song-id">009</td></tr>
-    <tr><td class="artist-name">Ado</td><td class="song-name">ギラギラ</td><td class="song-id">010</td></tr>
-    <tr><td class="artist-name">Ado</td><td class="song-name">レディメイド</td><td class="song-id">011</td></tr>
-    <tr><td class="artist-name">Ado</td><td class="song-name">私は最強</td><td class="song-id">012</td></tr>
-    <tr><td class="artist-name">Ado</td><td class="song-name">新時代</td><td class="song-id">013</td></tr>
-    <tr><td class="artist-name">嵐</td><td class="song-name">Love so sweet</td><td class="song-id">014</td></tr>
-    <tr><td class="artist-name">嵐</td><td class="song-name">One Love</td><td class="song-id">015</td></tr>
-    <tr><td class="artist-name">AliA</td><td class="song-name">かくれんぼ</td><td class="song-id">016</td></tr>
-    <tr><td class="artist-name">angela</td><td class="song-name">Shangri-la</td><td class="song-id">017</td></tr>
-    <tr><td class="artist-name">いきものがかり</td><td class="song-name">YELL</td><td class="song-id">018</td></tr>
-    <tr><td class="artist-name">いきものがかり</td><td class="song-name">ブルーバード</td><td class="song-id">019</td></tr>
-    <tr><td class="artist-name">石川　さゆり</td><td class="song-name">津軽海峡冬景色</td><td class="song-id">020</td></tr>
+    <tr>
+      <td class="artist-name">IWish</td>
+      <td class="hidden">あいうぃっしアイウィッシュ</td>
+      <td class="song-name">明日への扉</td>
+      <td class="hidden">あすへのとびらアスヘノトビラ</td>
+      <td class="song-id">003</td>
+    </tr>
+    <tr>
+      <td class="artist-name">相川　七瀬</td>
+      <td class="hidden">あいかわななせアイカワナナセ</td>
+      <td class="song-name">夢見る少女じゃいられない</td>
+      <td class="hidden">ゆめみるしょうじょじゃいられないユメミルショウジョジャイラレナイ</td>
+      <td class="song-id">004</td>
+    </tr>
+    <tr>
+      <td class="artist-name">AKINO</td>
+      <td class="hidden">あきのアキノ</td>
+      <td class="song-name">創聖のアクエリオン</td>
+      <td class="hidden">そうせいのあくえりおんソウセイノアクエリオン</td>
+      <td class="song-id">005</td>
+    </tr>
+    <tr>
+      <td class="artist-name">りょーくん</td>
+      <td class="hidden">りょーくんリョークン</td>
+      <td class="song-name">吉原ラメント</td>
+      <td class="hidden">よしわららめんとヨシワララメント</td>
+      <td class="song-id">006</td>
+    </tr>
+    <tr>
+      <td class="artist-name">新しい月このリーダーズ</td>
+      <td class="hidden">あたらしいつきこのりーだーずアタラシイツキコノリーダーズ</td>
+      <td class="song-name">オトナブルー</td>
+      <td class="hidden">おとなぶるーオトナブルー</td>
+      <td class="song-id">007</td>
+    </tr>
+    <tr>
+      <td class="artist-name">Ado</td>
+      <td class="hidden">あどアド</td>
+      <td class="song-name">阿修羅ちゃん</td>
+      <td class="hidden">あしゅらちゃんアシュラチャン</td>
+      <td class="song-id">008</td>
+    </tr>
+    <tr>
+      <td class="artist-name">Ado</td>
+      <td class="hidden">あどアド</td>
+      <td class="song-name">うっせぇわ</td>
+      <td class="hidden">うっせぇわウッセェワ</td>
+      <td class="song-id">009</td>
+    </tr>
+    <tr>
+      <td class="artist-name">Ado</td>
+      <td class="hidden">あどアド</td>
+      <td class="song-name">ギラギラ</td>
+      <td class="hidden">ぎらぎらギラギラ</td>
+      <td class="song-id">010</td>
+    </tr>
+    <tr>
+      <td class="artist-name">Ado</td>
+      <td class="hidden">あどアド</td>
+      <td class="song-name">レディメイド</td>
+      <td class="hidden">れでぃめいどレディメイド</td>
+      <td class="song-id">011</td>
+    </tr>
+    <tr>
+      <td class="artist-name">Ado</td>
+      <td class="hidden">あどアド</td>
+      <td class="song-name">私は最強</td>
+      <td class="hidden">わたしはさいきょうワタシハサイキョウ</td>
+      <td class="song-id">012</td>
+    </tr>
+    <tr>
+      <td class="artist-name">Ado</td>
+      <td class="hidden">あどアド</td>
+      <td class="song-name">新時代</td>
+      <td class="hidden">しんじだいシンジダイ</td>
+      <td class="song-id">013</td>
+    </tr>
+    <tr>
+      <td class="artist-name">嵐</td>
+      <td class="hidden">あらしアラシ</td>
+      <td class="song-name">Love so sweet</td>
+      <td class="hidden">らぶそーすうぃーとラブソースウィート</td>
+      <td class="song-id">014</td
   </tbody>
 </table>
 
